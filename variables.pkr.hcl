@@ -7,7 +7,7 @@ variable "openstack_auth_url" {
 variable "openstack_username" {
   description = "Name of the user/service account which is trying to connect to openstack cloud"
   type        = string
-  default     = "sunilka"
+  default     = "devops"
 }
 
 variable "openstack_password" {
@@ -31,19 +31,19 @@ variable "flavor" {
 variable "region" {
   description = "flavor for the project"
   type        = string
-  default     = "iadprod"
+  default     = "cloud-prod"
 }
 
 
 variable "networks" {
   description = "Network ID where you want resoures to be created"
-  default     = "ee102258-a15e-4065-813c-f8a11cf522dc"
+  default     = "edsfsdfddfg123c-f8a11cf522dc"
 }
 
 variable "security_groups_name" {
   description = "Security group name/ID for the project"
   type        = string
-  default     = "itops-infra"
+  default     = "devops-infra"
 }
 
 
@@ -55,19 +55,19 @@ variable "domain_name" {
 
 variable "floating_ip_network" {
   description = "Network ID where you want resoures to be created"
-  default     = "26c6d7c3-298f-46eb-9d73-7a84bc1a787b"
+  default     = "26c6sdsdf-123sdv3-298f-46eb-9d73-7asdfds1a787b"
 }
 
 variable "ssh_keypair_name" {
   description = "Keypair for the project"
   type        = string
-  default     = "itops-infra-project"
+  default     = "devops-infra"
 }
 
 
 variable "source_image" {
   description = "Image ID/Name where you want resoures to be created"
-  default     = "d940bc05-7f88-4674-8409-ead1807d951c"
+  default     = "d94sadsd05-7fsdsd8-4674-8409-sdfdsfsdfsdf"
 }
 
 
