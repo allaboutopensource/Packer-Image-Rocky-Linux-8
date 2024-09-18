@@ -1,5 +1,5 @@
 variable "openstack_auth_url" {
-  description = "Name of the user/service account which is trying to connect to openstack cloud"
+  description = "API endpoint to connect to openstack cloud"
   type        = string
   default     = env("OS_AUTH_URL")
 }
@@ -29,7 +29,7 @@ variable "flavor" {
 }
 
 variable "region" {
-  description = "flavor for the project"
+  description = "Region for the project"
   type        = string
   default     = "cloud-prod"
 }
@@ -48,7 +48,7 @@ variable "security_groups_name" {
 
 
 variable "domain_name" {
-  description = "Security group name/ID for the project"
+  description = "domain Name for the project"
   type        = string
   default     = env("OS_USER_DOMAIN_NAME")
 }
@@ -66,7 +66,7 @@ variable "ssh_keypair_name" {
 
 
 variable "source_image" {
-  description = "Image ID/Name where you want resoures to be created"
+  description = "Image ID/Name from where you will pick the image"
   default     = "d94sadsd05-7fsdsd8-4674-8409-sdfdsfsdfsdf"
 }
 
