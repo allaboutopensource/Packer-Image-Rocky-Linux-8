@@ -24,7 +24,7 @@ source "openstack" "rocky" {
   floating_ip_network  = var.floating_ip_network
   ssh_timeout          = "10m"
   insecure             = "true"
-  ssh_private_key_file = "itops-infra-project.pem"
+  ssh_private_key_file = "devops-project.pem"
   ssh_keypair_name     = var.ssh_keypair_name
   metadata = {
     "created_by" : "packer-automation"
