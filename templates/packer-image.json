@@ -1,0 +1,43 @@
+{
+
+ "builders":  [
+   
+     {
+      "type": "openstack",
+      "identity_endpoint": "{{user `openstack_identity_endpoint` }}",
+      "tenant_name": "{{user `tenant_name` }}",
+      "domain_name": "{{user `domain_name` }}",
+      "username": "{{user `openstack_username` }}",
+      "password": "{{user `openstack_password` }}",
+      "image_visibility": "private",
+      "region": "{{user `region` }}",
+      "communicator": "ssh",
+      "ssh_username": "ellucian",
+      "ssh_pty": "true",
+      "ssh_keypair_name": "{{user `ssh_keypair_name` }}",
+      "ssh_private_key_file": "{{user `ssh_private_key_file` }}",
+      "floating_ip_network": "{{user `floating_ip_network` }}",
+      "image_name": "{{user `image_name` }}",
+      "source_image": "{{user `source_image` }}",
+      "flavor": "{{user `flavor` }}",
+      "security_groups": "{{user `security_groups` }}",
+      "networks": "{{user `networks` }}",
+      "insecure": "true"
+   }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "../../Ansible/ansible-provisioners.yaml",
+      "user": "ellucian",
+      "timeout": "15m",
+      "extra_arguments": [ "-vvvv" ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo gem install serverspec -y"
+      ]
+    }
+  ]
+}

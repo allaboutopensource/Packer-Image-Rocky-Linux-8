@@ -1,0 +1,16 @@
+---
+  - name: 'Provision Image'
+    hosts: all
+    become: true
+    gather_facts: false
+    vars:
+        ansible_ssh_private_key_file: ../Packer/Linux/itops-infra-project.pem
+    tasks:
+    - name: install Apache
+      package:
+        name: 'httpd'
+        state: present
+    - name: Install git 
+      yum:
+       name: git
+       state: latest
